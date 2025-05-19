@@ -8,7 +8,7 @@ liDOM.style.fonSize = '2rem';
 
 let time = 0;
 
-function changeTitle() {
+/*function changeTitle() {
     titleDOM.textContent = title;
     time++;
     if (time % 2 === 0) {
@@ -18,34 +18,27 @@ function changeTitle() {
     }
 }
 setInterval(changeTitle, 1000);
+*/
 
-
-/* kai nori laikrodi sustabdyti po kazkiek laiko:
+// kai nori laikrodi sustabdyti po kazkiek laiko:
 
 function changeTitle() {
     time++;
-    if (time > 6) {
-        clearInterval(timer);
-        return;
-    }
-}
+   
 
   if (time % 2 === 0) {
         titleDOM.textContent = `Document (${time})`;
     } else {
         titleDOM.textContent = `${title} (${time})`;
     }
+     
+    if (time > 6) {
+        clearInterval(timer);
+        return;
+    }
+}
 
 const timer = setInterval(changeTitle, 1000);
-*/
-
-
-
-
-
-
-
-
 
 
 
@@ -54,24 +47,23 @@ const vegetables = ['pomidoras', 'kopūstas', 'svogūnas','bulvė', 'dobiliukai'
 
 let index = 0;
 
-for (const liDOM of liListDOM) {
+/*for (const liDOM of liListDOM) {
     liDOM.textContent = vegetables[index] ? vegetables[index] : 'error';
 
     liDOM.style.backgroundColor = vegetables[index] ? 'green' : 'red';
 
-/* kitas budas parasyti stiliu:
+// kitas budas parasyti stiliui:
 
     if (vegetables[index]) {
         liDOM.style.backgroundColor = 'green';
     } else {
         liDOM.style.backgroundColor = 'red';
     }
-   */
 
     liDOM.style.fonSize = '1.2rem';
     index++;
 }
-
+*/
 
 //Pavyzdys su klasemis:
 for (const liDOM of liListDOM) {
