@@ -4,7 +4,7 @@ const title = 'Zuikio daržas';
 
 h1DOM.textContent = title;
 h1DOM.style.backgroundColor = 'yellow';
-liDOM.style.fonSize = '2rem';
+h1DOM.style.fonSize = '2rem';
 
 let time = 0;
 
@@ -34,7 +34,6 @@ function changeTitle() {
      
     if (time > 6) {
         clearInterval(timer);
-        return;
     }
 }
 
@@ -42,7 +41,7 @@ const timer = setInterval(changeTitle, 1000);
 
 
 
-const liDOM = document.querySelectorAll('li');
+const liListDOM = document.querySelectorAll('li');
 const vegetables = ['pomidoras', 'kopūstas', 'svogūnas','bulvė', 'dobiliukai'];
 
 let index = 0;
@@ -50,11 +49,11 @@ let index = 0;
 /*for (const liDOM of liListDOM) {
     liDOM.textContent = vegetables[index] ? vegetables[index] : 'error';
 
-    liDOM.style.backgroundColor = vegetables[index] ? 'green' : 'red';
+  liDOM.style.backgroundColor = vegetables[index] ? 'green' : 'red';
 
-// kitas budas parasyti stiliui:
+ kitas budas parasyti stiliui:
 
-    if (vegetables[index]) {
+ if (vegetables[index]) {
         liDOM.style.backgroundColor = 'green';
     } else {
         liDOM.style.backgroundColor = 'red';
