@@ -1,3 +1,4 @@
+
 /*console.log('Labas rytas, Lietuva!');
 console.error('Labas rytas, Lietuva!');
 console.table({ name: 'Labas rytas, Lietuva!' });
@@ -7,6 +8,9 @@ function sum(a, b) {
     
 }
 console.log(sum(5, 10));*/
+import { header} from "./header.js";
+
+header(true);
 
 const h1DOM = document.getElementsByTagName('h1');
 console.log(h1DOM);

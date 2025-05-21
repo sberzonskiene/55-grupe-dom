@@ -13,40 +13,25 @@ let deletedCount = 0;
 formDOM.addEventListener('submit', (event) => {
     event.preventDefault();
 
-// kai raso nauja po apacia:
-    
-/*    listDOM.innerHTML += `
+     listDOM.insertAdjacentHTML('afterbegin', `
         <div class="item">
             <div class="header">
                 <div class="index">${++count}</div>
                 <button class="btn" type="button">Delete</button>
-            </div>    
+            </div>
             <div class="content">${inputDOM.value}</div>
-        </div>`;  */
-
- // kai raso virsuje nauja:
- 
-    listDOM.innerHTML = `
-        <div class="item">
-            <div class="header">
-                <div class="index">${++count}</div>
-                <button class="btn" type="button">Delete</button>
-            </div>    
-            <div class="content">${inputDOM.value}</div>
-        </div>` + listDOM.innerHTML;
+        </div>`);
 
     inputDOM.value = '';
     inputDOM.focus();
-    const deleteBtnListDOM = document.querySelectorAll('.btn');
 
-    for ( const btnDOM of deleteBtnListDOM) {
-        btnDOM.addEventListener('click', () => {
-             btnDOM.parentNode.parentNode.remove();
+    const deleteBtnDOM = document.querySelector('.btn');
+
+        deleteBtnDOM.addEventListener('click', () => {
+             deleteBtnDOM.parentNode.parentNode.remove();
              deletedCount++;
              h1DOM.textContent = `Task planner (${count - deletedCount})`;
-
-        });
-    }
+    });
 
     h1DOM.textContent = `Task planner (${count - deletedCount})`;
 });
