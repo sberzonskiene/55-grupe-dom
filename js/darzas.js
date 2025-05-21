@@ -44,7 +44,6 @@ function changeTitle() {
 const timer = setInterval(changeTitle, 1000);
 
 
-
 const liListDOM = document.querySelectorAll('li');
 const vegetables = ['pomidoras', 'kopūstas', 'svogūnas','bulvė', 'dobiliukai'];
 
@@ -71,6 +70,7 @@ let index = 0;
 //Pavyzdys su klasemis:
 for (const liDOM of liListDOM) {
     liDOM.textContent = vegetables[index] ? vegetables[index] : 'error';
+    
     if (vegetables[index]) {
         liDOM.classList.add('zuikio-darzove');
     } else {
