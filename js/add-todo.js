@@ -2,7 +2,7 @@ import { header } from "./header.js";
 
 header();
 
-const formDOm = document.querySelector('form');
+const formDOM = document.querySelector('form');
 const inputDOM = formDOM.querySelector('input');
 const listDOM = document.querySelector('.todo-list');
 
